@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/admin.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form action="{% url 'logout' %}" method="post" id="logout-form" style="display: inline;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-secondary">
+        <span class="material-symbols-outlined">
+            logout
+        </span>
+    </button>
+</form>
+<a class="btn btn-primary linker" href="{% url 'createUser' %}" >
+    <span class="material-symbols-outlined" style="font-size: 24px;">
+        person
+    </span>
+</a>
+<a class="btn btn-primary melinker linker"  href="{% url 'me' %}" >
+    <span class="material-symbols-outlined" >
+        account_circle
+    </span>
+</a>
+    <div class="container">
+        <h1>Modify Chatbot</h1>
+      <form method="post" action="{% url 'modification' %}">
+            {% csrf_token %}
+        <div class="form-group">
+    <label for="instructions">Instructions:</label>
+    <textarea id="instructions" name="instructions" class="form-control" required>{{ assistant.instructions }}</textarea>
+</div>
+   <div class="form-group">
+                <label for="add_files">Add Files:</label>
+             <input type="file" id="add_files" name="add_files[]" class="form-control" multiple>
+            </div>
+            <div class="form-group">
+                <label for="delete_files">Delete Files:</label>
+                <select id="delete_files" name="delete_files" class="form-control" multiple>
+                    {% for file_id in assistant.files %}
+                        <option value="{{ file_id }}">{{ file_id }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Modify Chatbot</button>
+        </form>
+    </div>
+</body>
+</html>

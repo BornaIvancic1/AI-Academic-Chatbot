@@ -1,0 +1,202 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: colorAnimation 3s infinite alternate;
+}
+
+@keyframes colorAnimation {
+    0% {
+        background-color: rgba(30, 0, 0, 1);
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+body * {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 450px !important;
+    animation: aoxyAnimation 3s infinite alternate;
+    border-radius: 100px;
+    border: 1px solid #CE1212; /* Red border */
+    padding: 17px 50px !important;
+    box-shadow: 0 0 30px rgba(206, 18, 18, 1); /* Initial red shadow */
+       text-align: center !important;
+          align-items: center !important;
+      justify-content: center !important;
+    flex-direction: column;
+
+}
+
+@keyframes aoxyAnimation {
+    0% {
+        box-shadow: 0 0 30px rgba(206, 18, 18, 1);
+    }
+    100% {
+        box-shadow: 0 0 60px #CE1212;
+    }
+}
+
+h1 {
+    color: #ff0000 !important; /* Red text for the header */
+}
+
+.form-group label {
+    color: #ff0000; /* Red text for labels */
+}
+
+.btn-primary {
+    transition: background 0.8s ease, box-shadow 0.8s ease;
+    border: none !important;
+              outline: none !important;
+        border-radius: 50px !important;
+margin: 15px;
+  background: linear-gradient(to bottom, rgba(159,0,0), rgba(93,0,0)) !important;
+      animation: btnPAnimation 3s infinite alternate !important;
+    }
+    @keyframes btnPAnimation {
+        0% {
+            box-shadow: 0 0 10px black;
+
+        }
+
+
+        100% {
+            box-shadow: 0 0 30px red;
+        }
+    }
+
+    .btn-primary:hover {
+         color: black !important;
+     background: white !important;
+        box-shadow: 0 0 50px white !important;
+    }
+    .form-control {
+ display: block;
+          margin: 10px !important;
+        background: linear-gradient(to left, rgb(50,0,0), black) !important;
+        color: #fff !important;
+        border: none !important;
+        border-radius: 50px !important;
+
+         animation: boxy2Animation 3s infinite alternate;
+}
+
+@keyframes boxy2Animation {
+    0% {
+              box-shadow: 0 3px 3px rgba(100,0,0);
+
+    }
+
+
+
+    100% {
+       box-shadow: 0 6px 6px red;
+    }
+}
+
+ .btn-secondary {
+          outline: none !important;
+        padding-left: 15px !important;
+            padding-top: 12.5px !important;
+ border-radius: 50px !important;
+      margin-left: 10px;
+  background: linear-gradient(to bottom, rgba(159, 133, 248, 1), rgba(63, 53, 99, 1)) !important;
+        color: #fff !important;
+        border: none !important;
+        transition: background 0.8s ease, box-shadow 0.8s ease;
+       animation: btnSAnimation 3s infinite alternate !important;
+    }
+
+    .btn-secondary:hover {
+        background: red !important;
+        box-shadow: 0 0 50px red !important;
+
+    }
+ @keyframes btnSAnimation {
+        0% {
+            box-shadow: 0 0 10px black;
+
+        }
+
+
+        100% {
+            box-shadow: 0 0 30px rgba(159, 133, 248, 1);
+        }
+    }
+
+  #logout-form {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 10px;
+        }
+  .linker{
+        position: absolute;
+            top: 0;
+            left: 90px;
+            margin: 10px;
+
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-decoration: none !important;
+
+      padding: 12.5px !important;
+  }
+  select.form-control:not(:focus) {
+    color: #000; /* Change text color to black when not focused */
+}
+
+select.form-control:focus option {
+    background: #fff; /* White background for options */
+    color: #000; /* Black text for options */
+}
+
+.melinker{
+margin-left: 90px;
+             background: linear-gradient(to bottom, springgreen, green) !important;
+
+        color: black !important;
+
+        transition: background 0.8s ease, box-shadow 0.8s ease, color 0.8s ease !important;
+       animation: btnMAnimation 3s infinite alternate !important;
+}
+   @keyframes btnMAnimation {
+        0% {
+            box-shadow: 0 0 10px black;
+        }
+
+        100% {
+            box-shadow: 0 0 30px springgreen;
+        }
+    }
+     .melinker:hover {
+         color: black !important;
+     background: springgreen !important;
+        box-shadow: 0 0 50px springgreen !important;
+    }
+#instructions{
+    padding: 20px !important;
+}

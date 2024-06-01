@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/admin.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form action="{% url 'logout' %}" method="post" id="logout-form" style="display: inline;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-secondary">
+        <span class="material-symbols-outlined">
+            logout
+        </span>
+    </button>
+</form>
+<a class="btn btn-primary linker"  href="{% url 'modification' %}" >
+    <span class="material-symbols-outlined" style="font-size: 24px;">
+        smart_toy
+    </span>
+</a>
+<a class="btn btn-primary melinker linker"  href="{% url 'me' %}" >
+    <span class="material-symbols-outlined" >
+        account_circle
+    </span>
+</a>
+    <div class="container">
+        <h1>Create User</h1>
+        <form method="post" action="{% url 'createUser' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="user_type">User Type:</label>
+                <select id="user_type" name="user_type" class="form-control">
+                    <option value="student">Student</option>
+                    <option value="professor">Professor</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Create User</button>
+        </form>
+    </div>
+</body>
+</html>

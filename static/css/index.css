@@ -1,0 +1,288 @@
+body {
+    margin-bottom: 60px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: 'Roboto', sans-serif;
+    animation: colorAnimation 3s infinite alternate;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0 ;
+  }
+  to {
+    opacity: 1 ;
+  }
+}
+
+body * {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes colorAnimation {
+    0% {
+        background-color: rgba(23, 20, 33, 1);
+    }
+
+
+
+    100% {
+        background-color: black;
+    }
+}
+
+    .login-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #1222CE;
+        background: rgba(102, 51, 153, 0.01);
+        border-radius: 100px;
+        box-shadow: 0 0 200px rgba(0, 0, 0, 0.3);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+         animation: boxyAnimation 3s infinite alternate;
+}
+
+
+@keyframes boxyAnimation {
+    0% {
+              box-shadow: 0 0 10px rgba(159, 133, 248, 1);
+
+    }
+
+
+
+    100% {
+       box-shadow: 0 0 10px #1222CE;
+    }
+}
+
+    .kocka2 {
+        text-align: center;
+        box-shadow: 0 0 150px rgba(18, 34, 206, 0.4);
+        height: 250px;
+        background-color: rgba(102, 51, 153, 0.01);
+        width: 470px;
+        border-radius: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+.register{
+    margin-top: 15px;
+
+}
+    .form-label {
+margin-top:7px;
+         color: rgba(159, 133, 248, 1);
+        font-size:17px;
+        font-weight:600;
+         animation: labelAnimation 3s infinite alternate;
+    }
+    @keyframes labelAnimation {
+    0% {
+              text-shadow: 0 0 10px black;
+
+    }
+
+
+
+    100% {
+        text-shadow: 0 0 30px rgba(159, 133, 248, 1);
+    }
+}
+
+    .form-control {
+          margin: 10px !important;
+        background: linear-gradient(to left, #1A033C, black) !important;
+        color: #fff !important;
+        border: none !important;
+        border-radius: 50px !important;
+        width: 250px;
+         animation: boxy2Animation 3s infinite alternate;
+}
+
+
+@keyframes boxy2Animation {
+    0% {
+              box-shadow: 0 3px 3px rgba(159, 133, 248, 1);
+
+    }
+
+
+
+    100% {
+       box-shadow: 0 6px 6px #1222CE;
+    }
+}
+
+    .btn {
+        border-radius: 50px !important;
+    }
+
+    .btn-primary {
+          outline: none !important;
+        padding-left: 15px !important;
+            padding-top: 12.5px !important;
+        margin: 10px;
+             background: linear-gradient(to bottom, #1222CE, #050B5E) !important;
+
+        color: #fff !important;
+        border: none !important;
+        transition: background 0.8s ease, box-shadow 0.8s ease, color 0.8s ease !important;
+       animation: btnPAnimation 3s infinite alternate !important;
+    }
+    @keyframes btnPAnimation {
+        0% {
+            box-shadow: 0 0 10px black;
+
+        }
+
+
+        100% {
+            box-shadow: 0 0 30px #1222CE;
+        }
+    }
+    @keyframes btnSAnimation {
+        0% {
+            box-shadow: 0 0 10px black;
+
+        }
+
+
+        100% {
+            box-shadow: 0 0 30px rgba(159, 133, 248, 1);
+        }
+    }
+    .btn-primary:hover {
+         color: black !important;
+     background: white !important;
+        box-shadow: 0 0 50px white !important;
+    }
+
+    .btn-secondary {
+          outline: none !important;
+        padding-left: 15px !important;
+            padding-top: 12.5px !important;
+text-shadow: none !important;
+      margin: 10px;
+  background: linear-gradient(to bottom, rgba(159, 133, 248, 1), rgba(63, 53, 99, 1)) !important;
+        color: #fff !important;
+        border: none !important;
+        transition: background 0.8s ease, box-shadow 0.8s ease;
+       animation: btnSAnimation 3s infinite alternate !important;
+    }
+
+    .btn-secondary:hover {
+        background: red !important;
+        box-shadow: 0 0 50px red !important;
+
+    }
+
+.arbeglah1 {
+    margin-bottom: 25px !important;
+           color: #1222CE;
+    animation: boxAnimation 3s infinite alternate;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transform: perspective(500px) rotateY(15deg);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.arbeglah1:hover {
+    transform: perspective(500px) rotateY(0deg) scale(1.1);
+}
+
+
+
+@keyframes boxAnimation {
+    0% {
+              text-shadow: 0 0 10px black;
+
+    }
+
+
+
+    100% {
+        text-shadow: 0 0 20px #1222CE;
+    }
+}
+
+#imglogo {
+    animation: spinRight 10s linear infinite;
+}
+
+@keyframes spinRight {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.messages{
+    margin: 15px;
+}
+.messages strong{
+    display: block;
+    margin-bottom: 10px !important;
+        margin-top: 10px !important;
+
+}
+.userStrong{
+        color: #1222CE;
+
+}
+.botStrong{
+        color: red;
+
+}
+.btn-default {
+    font-weight: bold; !important;
+    text-shadow: none !important;
+      transition: background 0.8s ease,color 0.8s ease;
+    border: none !important;
+              outline: none !important;
+        border-radius: 50px !important;
+    margin: 20px !important;
+    background: linear-gradient(to bottom, lightblue, #6cace4) !important;
+    color: black !important;
+    padding: 10px !important;
+           animation: btnDAnimation 3s infinite alternate !important;
+    }
+.btn-default.history{
+    margin-left: 8px !important;
+      padding-left: 12.5px !important;
+      padding-right: 12px !important;
+            padding-top: 13px !important;
+       padding-bottom: 5px !important;
+}
+    @keyframes btnDAnimation {
+        0% {
+            box-shadow: 0 0 10px black;
+
+        }
+
+
+        100% {
+            box-shadow: 0 0 30px #1222CE;
+        }
+    }
+.btn-default:hover {
+    background: red !important;
+    color: black !important;
+}
+.container.Past{
+    border: 1px solid #1222CE;
+        background: rgba(102, 51, 153, 0.01);
+        border-radius: 100px;
+        box-shadow: 0 0 200px #1222CE;
+    padding: 20px;
+      border-radius: 50px;
+    margin-top: 100px !important;
+width: 600px;
+}
+
